@@ -1,4 +1,6 @@
 char1 = ""
+class LessArgsException(Exception):
+    pass
 """
 Many c/c++ functions are written in cppfunctions module. PLease install as "pip install cppfunctions"
 """
