@@ -202,28 +202,28 @@ def printf(__format:str , *vars):
             try:
              result = result.replace("%i" , str(int(vars[count])) , 1)
             except IndexError:
-             result = result.replace("%d" , str(random.randint(1,10000)) , 1)
+             raise(LessArgsException("Please provide arguements to printf()."))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "s"):
             try:
              result = result.replace("%s" , str(vars[count]) , 1)
             except IndexError:
-             result =  result.replace("%s" , str("None") ,1)
+             raise(LessArgsException("Please provide arguements to printf()."))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "f"):
             try:
                 result = result.replace("%f" , str(float(vars[count])) , 1)
             except:
-                result = result.replace("%f" , str(random.random()*1000))
+                raise(LessArgsException("Please provide arguements to printf()."))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "b"):
             try:
              result = result.replace("%b" , str(bool(vars[count])) , 1)
             except IndexError:
-             result = result.replace("%b", str(True) , 1)
+             raise(LessArgsException("Please provide arguements to printf()."))
             count+=1
             char1 = ""
     print(result , end="")
