@@ -26,5 +26,3 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 ## License
 
 MIT
-
-**Free Software, Hell Yeah!**
