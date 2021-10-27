@@ -195,7 +195,7 @@ def printf(__format:str , *vars):
             try:
              result = result.replace("%d" , str(int(vars[count])) , 1)
             except IndexError:
-             result = result.replace("%d" , str(random.randint(1,10000)) , 1)
+             raise(LessArgsException("Please provide arguements to printf()."))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "i"):
