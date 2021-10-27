@@ -1,6 +1,10 @@
 char1 = ""
+import random
 class LessArgsException(Exception):
-    pass
+    def __init__(self, *args: object) -> None:
+        self.message = args[0]
+    def __str__(self) -> str:
+        return self.message
 """
 Many c/c++ functions are written in cppfunctions module. PLease install as "pip install cppfunctions"
 """
@@ -46,7 +50,7 @@ def puts(str):
     ARGUEMENTS:
         None
     Does:
-        Write string to stdout
+        Writes a string to stdout
     """
     print(str , end="")
 def getchar():
@@ -188,23 +192,38 @@ def printf(__format:str , *vars):
         if(i == '%'):
             char1 = i
         elif(char1 == "%" and i == "d"):
-            result = result.replace("%d" , str(int(vars[count])) , 1)
+            try:
+             result = result.replace("%d" , str(int(vars[count])) , 1)
+            except IndexError:
+             result = result.replace("%d" , str(random.randint(1,10000)) , 1)
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "i"):
-            result = result.replace("%i" , str(int(vars[count])) , 1)
+            try:
+             result = result.replace("%i" , str(int(vars[count])) , 1)
+            except IndexError:
+             result = result.replace("%d" , str(random.randint(1,10000)) , 1)
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "s"):
-            result = result.replace("%s" , str(vars[count]) , 1)
+            try:
+             result = result.replace("%s" , str(vars[count]) , 1)
+            except IndexError:
+             result =  result.replace("%s" , str("None") ,1)
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "f"):
-            result = result.replace("%f" , str(float(vars[count])) , 1)
+            try:
+                result = result.replace("%f" , str(float(vars[count])) , 1)
+            except:
+                result = result.replace("%f" , str(random.random()*1000))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "b"):
-            result = result.replace("%b" , str(bool(vars[count])) , 1)
+            try:
+             result = result.replace("%b" , str(bool(vars[count])) , 1)
+            except IndexError:
+             result = result.replace("%b", str(True) , 1)
             count+=1
             char1 = ""
     print(result , end="")
