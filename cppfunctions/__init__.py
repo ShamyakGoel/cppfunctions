@@ -35,6 +35,16 @@ def fputs(file : IO,string:str):
         Writes a string to file
     """
     file.write(string+"\n")
+def fputc(file : IO , string:str):
+    """
+    Puts/Writes a character into a file. Identical to c/c++ fputc function
+    Developed by : Shamyak Goel (26/10/2021)\n
+    ARGUEMENTS:
+        None
+    Does:
+        Writes character to a file
+    """
+    file.write(string[0])
 def fgetc(file : IO):
     """
     Fecths a character from a file. Identical to c/c++ fgetc function
