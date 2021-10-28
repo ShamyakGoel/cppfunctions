@@ -12,9 +12,9 @@ Cppfunctions includes functions from c/c++ and syntax is very similar to c/c++
 
 ## Installation
 
-Cppfunctions requires python interpretor (python 3.9)
+Cppfunctions requires python interpretor (python 3)
 
-Install python on python.org and download latest version of python then
+Install python on <a href="https://python.org/downloads" rel="noreferrer noopener" target="_blank">python.org</a> and download latest version of python then
 
 Install the package as shown below
 
