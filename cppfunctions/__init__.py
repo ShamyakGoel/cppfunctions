@@ -12,6 +12,8 @@ from sys import stdin
 from typing import IO
 EOF = -1
 # String/Character IO. C/C++ Functions but in python !!
+def fopen(filename:str , mode:str):
+    return open(filename , mode)
 def fgets(file : IO):
     """
     Fecths a string from a file. Identical to c/c++ fgets function
