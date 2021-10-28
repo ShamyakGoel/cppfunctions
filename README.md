@@ -23,7 +23,7 @@ python -m pip install cppfunctions
 ```
 If you get an error  - pip is not recognized as function etc.
 then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" rel="noreferrer noopener" target="_blank">Click Here</a>
-# Functons
+# Functions
 ## All functions
 - fopen : Identical to c/++ fopen function. Opens a file in text mode.
 - fgets : Identical to c/c++ fgets function. Writes a string to a file.
