@@ -23,6 +23,10 @@ python -m pip install cppfunctions
 ```
 If you get an error  - pip is not recognized as function etc.
 then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" rel="noreferrer noopener" target="_blank">Click Here</a>
+## New functions
+- bopen : Opens a file in binary mode
+- bwrite : Writes encoded content in a binary file
+- bread : Returns text version of decoded binary file
 ## License
 
 MIT
