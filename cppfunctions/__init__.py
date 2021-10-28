@@ -12,6 +12,27 @@ from sys import stdin
 from typing import IO
 EOF = -1
 # String/Character IO. C/C++ Functions but in python !!
+def fgets(file : IO):
+    """
+    Fecths a string from a file. Identical to c/c++ fgets function
+    Developed by : Shamyak Goel (28/10/2021)\n
+    ARGUEMENTS:
+        File : File to the line is readed
+    Returns:
+        A string read by readline() function
+    """
+    return file.readline()
+def fputs(file : IO,string:str):
+    """
+    Writes a string from a file. Identical to c/c++ fputs function
+    Developed by : Shamyak Goel (28/10/2021)\n
+    ARGUEMENTS:
+        File : To be written
+        String : Content
+    Does:
+        Writes a string to file
+    """
+    file.write(string+"\n")
 def fgetc(file : IO):
     """
     Fecths a character from a file. Identical to c/c++ fgetc function
@@ -39,7 +60,7 @@ def put(file:IO , string : str):
     ARGUEMENTS:
         None
     Does:
-        Write character to a file
+        Writes character to a file
     """
     for i in string:
         file.write(i)
@@ -48,7 +69,7 @@ def puts(str):
     Puts a string in stdout. Identical to c/c++ puts function
     Developed by : Shamyak Goel (26/10/2021)\n
     ARGUEMENTS:
-        None
+        str : string to be put on stdout
     Does:
         Writes a string to stdout
     """
@@ -92,7 +113,7 @@ def getline(propmt):
     Identical to gets function but you can pass a propmt
     Developed by : Shamyak Goel (26/10/2021)\n
     ARGUEMENTS:
-        None
+        propmt : displaying before input
     Returns:
         A string fecthed by input() function.
     """
@@ -112,8 +133,8 @@ def sscanf(arr , __format: str):
     An alternative for c/c++ sscanf function.
     Developed by : Shamyak Goel (26/10/2021)\n
     ARGUEMENTS:
-        __format : str\n
-        *vars : list of variables to be replaced by special characters : %d or %i for an int , %s for a string , %f for a float , %b for a bolean value
+        arr : to be variables are scanned
+        __format : Formatted string with special characters %d or %i for an int , %s for a string , %f for a float , %b for a bolean value
     """
     global char1
     vars = list()
@@ -228,7 +249,7 @@ def printf(__format:str , *vars):
             char1 = ""
     print(result , end="")
     return result
-# New functions with extraordinary featchers
+# New functions with extraordinary features
 def priint(*ints):
     ints = map(int , ints)
     for i in ints:
