@@ -27,6 +27,9 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 - bopen : Opens a file in binary mode
 - bwrite : Writes encoded content in a binary file
 - bread : Returns text version of decoded binary file
+- fgets : Identical to c/c++ fgets function
+- fputs : Identical to c/c++ fputs function
+- fopen : Identical to c/++ fopen function
 ## License
 
 MIT
