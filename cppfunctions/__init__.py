@@ -267,26 +267,34 @@ def isdigit(string):
     else:
         return False
 # New functions with extraordinary features
-def priint(*ints):
+def priint(*ints,sep=" "):
     ints = map(int , ints)
     for i in ints:
-        print(i , end=" ")
+        print(i , end=sep)
     print()
-def priflo(*floats):
+
+def priflo(*floats,sep=" "):
     floats = map(float , floats)
     for i in floats:
-        print(i , end=" ")
+        print(i , end=sep)
     print()
-def pristr(*strs):
+
+def pristr(*strs,sep=" "):
     strs = map(str , strs)
     for i in strs:
-        print(i , end=" ")
+        print(i , end=sep)
     print()
 def bopen(filename:str , mode:str):
     return open(filename , mode+"b")
 def bwrite(file:IO,content:str):
     file.write(content.encode())
-def bread(file:IO):
+def bread(file:IO,raw=False):
+    if raw:
+        content = ""
+        i:bytes
+        for i in file:
+         content+=i
+        return content
     content = ""
     i:bytes
     for i in file:
