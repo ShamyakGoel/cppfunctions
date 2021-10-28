@@ -40,6 +40,7 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 - sscanf : Identical to c/c++ sscanf function. Reads data from an array in specific formats.(%d or %i for an int , %s for a string , %f for a float , %b for a bolean value)
 - sprintf : Identical to c/c++ sprintf function. Writes data into an array in specific formats. (%d or %i for an int , %s for a string , %f for a float , %b for a bolean value)
 - printf : Identical to c/c++ printf function. Writes data in stdout (Screen) in specific formats. (%d or %i for an int , %s for a string , %f for a float , %b for a bolean value)
+- isdigit : Return true of string is a digit string otherwise false
 - priint : New function that writes integers on stdout (Screen).
 - priflo : New function that writes floats on stdout (Screen).
 - pristr : New function that writes strings on stdout (Screen).

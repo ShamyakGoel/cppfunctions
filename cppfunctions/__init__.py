@@ -261,6 +261,11 @@ def printf(__format:str , *vars):
             char1 = ""
     print(result , end="")
     return result
+def isdigit(string):
+    if str(string).isdigit():
+        return True
+    else:
+        return False
 # New functions with extraordinary features
 def priint(*ints):
     ints = map(int , ints)
