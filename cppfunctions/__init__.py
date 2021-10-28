@@ -27,7 +27,7 @@ def fgets(file : IO):
 def fputs(file : IO,string:str):
     """
     Writes a string from a file. Identical to c/c++ fputs function
-    Developed by : Shamyak Goel (28/10/2021)\n
+    Developed by : Shamyak Goel (28/10/2021)
     ARGUEMENTS:
         File : To be written
         String : Content
