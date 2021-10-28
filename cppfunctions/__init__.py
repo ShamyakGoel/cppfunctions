@@ -267,3 +267,13 @@ def pristr(*strs):
     for i in strs:
         print(i , end=" ")
     print()
+def bopen(filename:str , mode:str):
+    return open(filename , mode+"b")
+def bwrite(file:IO,content:str):
+    file.write(content.encode())
+def bread(file:IO):
+    content = ""
+    i:bytes
+    for i in file:
+        content+=i.decode()
+    return content
