@@ -6,7 +6,7 @@ class LessArgsException(Exception):
     def __str__(self) -> str:
         return self.message
 """
-Many c/c++ functions are written in cppfunctions module. PLease install as "pip install cfunctions"
+Many c/c++ functions are written in cppfunctions module. PLease install as "pip install cppfunctions"
 """
 from sys import stdin
 from typing import IO
