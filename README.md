@@ -19,7 +19,7 @@ Install python on <a href="https://python.org/downloads" rel="noreferrer noopene
 Install the package as shown below
 
 ```
-python -m pip install cppfunctions
+pip install cppfunctions
 ```
 If you get an error  - pip is not recognized as function etc.
 then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" rel="noreferrer noopener" target="_blank">Click Here</a>
