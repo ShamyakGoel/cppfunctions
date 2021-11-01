@@ -9,7 +9,7 @@ setup(
   author_email = 'sj907822@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/ShamyakGoel/cppfunctions/',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/ShamyakGoel/cppfunctions/archive/refs/tags/v_14.tar.gz',    # I explain this later on
-  keywords = ['c++functions', 'cfuctions'],   # Keywords that define your package best
+  keywords = ['c++functions', 'cfunctions'],   # Keywords that define your package best
   install_requires=[],
   long_description_content_type="text/x-rst",
   classifiers=[
