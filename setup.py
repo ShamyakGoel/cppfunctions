@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-  name = 'cfunctions',         # How you named your package folder (cppfunctions)
-  packages = ['cfunctions'],   # Chose the same as "name"
+  name = 'c-functions',         # How you named your package folder (cppfunctions)
+  packages = ['c-functions'],   # Chose the same as "name"
   version = '1.4',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'My attempt to bring c/c++ functions to python',   # Give a short description about your library
