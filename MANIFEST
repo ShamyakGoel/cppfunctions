@@ -2,5 +2,5 @@
 README
 setup.cfg
 setup.py
-cfunctions\__init__.py
-cfunctions\main.py
+cppfunctions\__init__.py
+cppfunctions\main.py
