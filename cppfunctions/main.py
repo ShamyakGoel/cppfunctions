@@ -12,8 +12,21 @@ from sys import stdin
 from typing import IO
 EOF = -1
 # String/Character IO. C/C++ Functions but in python !!
+def getc(file : IO):
+    """
+    Identical to fgetc function.
+    Developed by : Shamyak Goel (1/11/2021)\n
+    """
+    return file.read(1)
+def putc(file : IO,character:str):
+    """
+    Identical to fputc function.
+    Developed by : Shamyak Goel (1/11/2021)\n
+    """
+    file.write(character[0])
 def fopen(filename:str , mode:str):
     return open(filename , mode)
+
 def fgets(file : IO):
     """
     Fecths a string from a file. Identical to c/c++ fgets function
@@ -26,7 +39,7 @@ def fgets(file : IO):
     return file.readline()
 def fputs(file : IO,string:str):
     """
-    Writes a string from a file. Identical to c/c++ fputs function
+    Writes a string to a file. Identical to c/c++ fputs function
     Developed by : Shamyak Goel (28/10/2021)
     ARGUEMENTS:
         File : To be written
@@ -74,8 +87,7 @@ def put(file:IO , string : str):
     Does:
         Writes character to a file
     """
-    for i in string:
-        file.write(i)
+    file.write(string[0])
 def puts(str):
     """
     Puts a string in stdout. Identical to c/c++ puts function
@@ -85,7 +97,56 @@ def puts(str):
     Does:
         Writes a string to stdout
     """
-    print(str , end="")
+def fprintf(file:IO,__format:str,*vars):
+    """
+    An alternative for c/c++ fprintf function.
+    Developed by : Shamyak Goel (1/11/2021)\n
+    ARGUEMENTS:
+        __format : str\n
+        *vars : list of variables to be replaced by special characters : %d or %i for an int , %s for a string , %f for a float , %b for a bolean value
+    """
+    global char1
+    count = 0
+    result = __format
+    for i in __format:
+        if(i == '%'):
+            char1 = i
+        elif(char1 == "%" and i == "d"):
+            try:
+             file.write(int(vars[count]))
+            except IndexError:
+             raise(LessArgsException("Please provide arguements to fprintf()."))
+            count+=1
+            char1 = ""
+        elif(char1 == "%" and i == "i"):
+            try:
+                file.write(int(vars[count]))
+            except IndexError:
+             raise(LessArgsException("Please provide arguements to fprintf()."))
+            count+=1
+            char1 = ""
+        elif(char1 == "%" and i == "s"):
+            try:
+             file.write(str(vars[count]))
+            except IndexError:
+             raise(LessArgsException("Please provide arguements to printf()."))
+            count+=1
+            char1 = ""
+        elif(char1 == "%" and i == "f"):
+            try:
+                file.write(float(vars[count]))
+            except:
+                raise(LessArgsException("Please provide arguements to printf()."))
+            count+=1
+            char1 = ""
+        elif(char1 == "%" and i == "b"):
+            try:
+             file.write(bool(vars[count]))
+            except IndexError:
+             raise(LessArgsException("Please provide arguements to printf()."))
+            count+=1
+            char1 = ""
+    return result
 def getchar():
     return stdin.read(1)
 def scanf(__format:str , *msg):
@@ -190,23 +251,38 @@ def sprintf(__format:str , *vars):
         if(i == '%'):
             char1 = i
         elif(char1 == "%" and i == "d"):
-            arr.append(int(vars[count]))
+            try:
+             arr.append(int(vars[count]))
+            except IndexError:
+                raise(LessArgsException("Please provide arguements to sprintf()"))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "i"):
-            arr.append(int(vars[count]))
+            try:
+              arr.append(int(vars[count]))
+            except IndexError:
+                raise(LessArgsException("Please provide arguements to sprintf()"))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "s"):
-            arr.append(str(vars[count]))
+            try:
+             arr.append(str(vars[count]))
+            except IndexError:
+                raise(LessArgsException("Please provide arguements to sprintf()"))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "f"):
-            arr.append(float(vars[count]))
+            try:
+             arr.append(float(vars[count]))
+            except IndexError:
+                raise(LessArgsException("Please provide arguements to sprintf()"))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "b"):
-            arr.append(bool(vars[count]))
+            try:
+             arr.append(bool(vars[count]))
+            except IndexError:
+                raise(LessArgsException("Please provide arguements to sprintf()"))
             count+=1
             char1 = ""
     return arr
