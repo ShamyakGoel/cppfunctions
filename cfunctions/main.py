@@ -1,4 +1,3 @@
-char1 = ""
 import random
 class LessArgsException(Exception):
     def __init__(self, *args: object) -> None:
@@ -12,52 +11,6 @@ from sys import stdin
 from typing import IO
 EOF = -1
 # String/Character IO. C/C++ Functions but in python !!
-def getc(file : IO):
-    """
-    Identical to fgetc function.
-    Developed by : Shamyak Goel (1/11/2021)\n
-    """
-    return file.read(1)
-def putc(file : IO,character:str):
-    """
-    Identical to fputc function.
-    Developed by : Shamyak Goel (1/11/2021)\n
-    """
-    file.write(character[0])
-def fopen(filename:str , mode:str):
-    return open(filename , mode)
-
-def fgets(file : IO):
-    """
-    Fecths a string from a file. Identical to c/c++ fgets function
-    Developed by : Shamyak Goel (28/10/2021)\n
-    ARGUEMENTS:
-        File : File to the line is readed
-    Returns:
-        A string read by readline() function
-    """
-    return file.readline()
-def fputs(file : IO,string:str):
-    """
-    Writes a string to a file. Identical to c/c++ fputs function
-    Developed by : Shamyak Goel (28/10/2021)
-    ARGUEMENTS:
-        File : To be written
-        String : Content
-    Does:
-        Writes a string to file
-    """
-    file.write(string+"\n")
-def fputc(file : IO , string:str):
-    """
-    Puts/Writes a character into a file. Identical to c/c++ fputc function
-    Developed by : Shamyak Goel (26/10/2021)\n
-    ARGUEMENTS:
-        None
-    Does:
-        Writes character to a file
-    """
-    file.write(string[0])
 def fgetc(file : IO):
     """
     Fecths a character from a file. Identical to c/c++ fgetc function
@@ -85,68 +38,20 @@ def put(file:IO , string : str):
     ARGUEMENTS:
         None
     Does:
-        Writes character to a file
+        Write character to a file
     """
-    file.write(string[0])
+    for i in string:
+        file.write(i)
 def puts(str):
     """
     Puts a string in stdout. Identical to c/c++ puts function
     Developed by : Shamyak Goel (26/10/2021)\n
     ARGUEMENTS:
-        str : string to be put on stdout
+        None
     Does:
         Writes a string to stdout
     """
-def fprintf(file:IO,__format:str,*vars):
-    """
-    An alternative for c/c++ fprintf function.
-    Developed by : Shamyak Goel (1/11/2021)\n
-    ARGUEMENTS:
-        __format : str\n
-        *vars : list of variables to be replaced by special characters : %d or %i for an int , %s for a string , %f for a float , %b for a bolean value
-    """
-    global char1
-    count = 0
-    result = __format
-    for i in __format:
-        if(i == '%'):
-            char1 = i
-        elif(char1 == "%" and i == "d"):
-            try:
-             file.write(int(vars[count]))
-            except IndexError:
-             raise(LessArgsException("Please provide arguements to fprintf()."))
-            count+=1
-            char1 = ""
-        elif(char1 == "%" and i == "i"):
-            try:
-                file.write(int(vars[count]))
-            except IndexError:
-             raise(LessArgsException("Please provide arguements to fprintf()."))
-            count+=1
-            char1 = ""
-        elif(char1 == "%" and i == "s"):
-            try:
-             file.write(str(vars[count]))
-            except IndexError:
-             raise(LessArgsException("Please provide arguements to printf()."))
-            count+=1
-            char1 = ""
-        elif(char1 == "%" and i == "f"):
-            try:
-                file.write(float(vars[count]))
-            except:
-                raise(LessArgsException("Please provide arguements to printf()."))
-            count+=1
-            char1 = ""
-        elif(char1 == "%" and i == "b"):
-            try:
-             file.write(bool(vars[count]))
-            except IndexError:
-             raise(LessArgsException("Please provide arguements to printf()."))
-            count+=1
-            char1 = ""
-    return result
+    print(str , end="")
 def getchar():
     return stdin.read(1)
 def scanf(__format:str , *msg):
@@ -186,7 +91,7 @@ def getline(propmt):
     Identical to gets function but you can pass a propmt
     Developed by : Shamyak Goel (26/10/2021)\n
     ARGUEMENTS:
-        propmt : displaying before input
+        None
     Returns:
         A string fecthed by input() function.
     """
@@ -206,8 +111,8 @@ def sscanf(arr , __format: str):
     An alternative for c/c++ sscanf function.
     Developed by : Shamyak Goel (26/10/2021)\n
     ARGUEMENTS:
-        arr : to be variables are scanned
-        __format : Formatted string with special characters %d or %i for an int , %s for a string , %f for a float , %b for a bolean value
+        __format : str\n
+        *vars : list of variables to be replaced by special characters : %d or %i for an int , %s for a string , %f for a float , %b for a bolean value
     """
     global char1
     vars = list()
@@ -251,38 +156,23 @@ def sprintf(__format:str , *vars):
         if(i == '%'):
             char1 = i
         elif(char1 == "%" and i == "d"):
-            try:
-             arr.append(int(vars[count]))
-            except IndexError:
-                raise(LessArgsException("Please provide arguements to sprintf()"))
+            arr.append(int(vars[count]))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "i"):
-            try:
-              arr.append(int(vars[count]))
-            except IndexError:
-                raise(LessArgsException("Please provide arguements to sprintf()"))
+            arr.append(int(vars[count]))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "s"):
-            try:
-             arr.append(str(vars[count]))
-            except IndexError:
-                raise(LessArgsException("Please provide arguements to sprintf()"))
+            arr.append(str(vars[count]))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "f"):
-            try:
-             arr.append(float(vars[count]))
-            except IndexError:
-                raise(LessArgsException("Please provide arguements to sprintf()"))
+            arr.append(float(vars[count]))
             count+=1
             char1 = ""
         elif(char1 == "%" and i == "b"):
-            try:
-             arr.append(bool(vars[count]))
-            except IndexError:
-                raise(LessArgsException("Please provide arguements to sprintf()"))
+            arr.append(bool(vars[count]))
             count+=1
             char1 = ""
     return arr
@@ -337,42 +227,19 @@ def printf(__format:str , *vars):
             char1 = ""
     print(result , end="")
     return result
-def isdigit(string):
-    if str(string).isdigit():
-        return True
-    else:
-        return False
-# New functions with extraordinary features
-def priint(*ints,sep=" "):
+# New functions with extraordinary featchers
+def priint(*ints):
     ints = map(int , ints)
     for i in ints:
-        print(i , end=sep)
+        print(i , end=" ")
     print()
-
-def priflo(*floats,sep=" "):
+def priflo(*floats):
     floats = map(float , floats)
     for i in floats:
-        print(i , end=sep)
+        print(i , end=" ")
     print()
-
-def pristr(*strs,sep=" "):
+def pristr(*strs):
     strs = map(str , strs)
     for i in strs:
-        print(i , end=sep)
+        print(i , end=" ")
     print()
-def bopen(filename:str , mode:str):
-    return open(filename , mode+"b")
-def bwrite(file:IO,content:str):
-    file.write(content.encode())
-def bread(file:IO,raw=False):
-    if raw:
-        content = ""
-        i:bytes
-        for i in file:
-         content+=i
-        return content
-    content = ""
-    i:bytes
-    for i in file:
-        content+=i.decode()
-    return content
