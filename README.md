@@ -47,6 +47,10 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 - bopen : Opens a file in binary mode
 - bwrite : Writes encoded content in a binary file
 - bread : Returns text version of decoded binary file
+- fprintf : Identical to c/c++ fprintf function. Writes data in file and you can pass formats of variables.(%d or %i for an int , %s for a string , %f for a float , %b for a bolean value)
+- putc : Identical to c/c++ putc function. Writes a character into a file.
+- getc : Identical tto c/c++ getc function. Returns a character read from a file.
+
 ## New functions
 - bopen : Opens a file in binary mode
 - bwrite : Writes encoded content in a binary file
@@ -54,6 +58,9 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 - fgets : Identical to c/c++ fgets function
 - fputs : Identical to c/c++ fputs function
 - fopen : Identical to c/++ fopen function
+- fprintf : Identical to c/c++ fprintf function.
+- putc : Identical to c/c++ putc function.
+- getc : Identical to c/c++ getc function.
 ## License
 
 MIT
