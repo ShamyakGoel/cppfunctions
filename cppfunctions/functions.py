@@ -342,6 +342,27 @@ def isdigit(string):
         return True
     else:
         return False
+def isalpha(string):
+    if str(string).isalpha():
+        return True
+    else:
+        return False
+def isalnum(string):
+    if str(string).isalnum():
+        return True
+    else:
+        return False
+def islower(string):
+    if str(string).islower():
+        return True
+    else:
+        return False
+def isspace(string):
+    if str(string).isspace():
+        return True
+    else:
+        return False
+
 # New functions with extraordinary features
 def priint(*ints,sep=" "):
     ints = map(int , ints)

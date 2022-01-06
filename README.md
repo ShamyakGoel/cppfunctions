@@ -50,17 +50,22 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 - fprintf : Identical to c/c++ fprintf function. Writes data in file and you can pass formats of variables.(%d or %i for an int , %s for a string , %f for a float , %b for a bolean value)
 - putc : Identical to c/c++ putc function. Writes a character into a file.
 - getc : Identical tto c/c++ getc function. Returns a character read from a file.
+- isalnum : Identical to c/c++ isalnum function, Returns True if a character/string is alphanumeric
+- isalpha : Identical to c/c++ isalpha function, Returns True if a character is alphabetic
+- islower : Identical to c/c++ islower function, Returns True if a character/string is lowercase
+- isspace : Identical to c/c++ isspace, Returns True if a character is a space character
 
 ## New functions
+- isalnum : Identical to c/c++ isalnum function
+- isalpha : Identical to c/c++ isalpha function
+- islower : Identical to c/c++ islower function
+- isspace : Identical to c/c++ isspace
 - bopen : Opens a file in binary mode
 - bwrite : Writes encoded content in a binary file
 - bread : Returns text version of decoded binary file
 - fgets : Identical to c/c++ fgets function
 - fputs : Identical to c/c++ fputs function
-- fopen : Identical to c/++ fopen function
-- fprintf : Identical to c/c++ fprintf function.
-- putc : Identical to c/c++ putc function.
-- getc : Identical to c/c++ getc function.
+
 ## License
 
 MIT
