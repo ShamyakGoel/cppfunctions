@@ -1,5 +1,4 @@
 char1 = ""
-import random
 class LessArgsException(Exception):
     def __init__(self, *args: object) -> None:
         self.message = args[0]
