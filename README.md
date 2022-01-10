@@ -1,4 +1,4 @@
-# Shamyak Goel
+# Cppfunctions
 
 cppfunctions includes functions from c/c++ and syntax is very similar to c/c++
 
