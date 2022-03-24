@@ -1,6 +1,6 @@
 # Shamyak Goel
 
-cfunctions includes functions from c/c++ and syntax is very similar to c/c++
+cppfunctions includes functions from c/c++ and syntax is very similar to c/c++
 
 - Please install the package ansd share this package to your friend's
 - Also subscribe my youtube channel Codewithshamyak
@@ -12,14 +12,14 @@ cfunctions includes functions from c/c++ and syntax is very similar to c/c++
 
 ## Installation
 
-cfunctions requires python interpretor (python 3)
+cppfunctions requires python interpretor (python 3)
 
 Install python on <a href="https://python.org/downloads" rel="noreferrer noopener" target="_blank">python.org</a> and download latest version of python then
 
 Install the package as shown below
 
 ```
-pip install cfunctions
+pip install cppfunctions
 ```
 If you get an error  - pip is not recognized as function etc.
 then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" rel="noreferrer noopener" target="_blank">Click Here</a>
@@ -50,17 +50,24 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 - fprintf : Identical to c/c++ fprintf function. Writes data in file and you can pass formats of variables.(%d or %i for an int , %s for a string , %f for a float , %b for a bolean value)
 - putc : Identical to c/c++ putc function. Writes a character into a file.
 - getc : Identical tto c/c++ getc function. Returns a character read from a file.
-
+- strlen: Identical tto c/c++ strlen function. Returns length of string.
+- strcmp: Identical tto c/c++ strcmp function. Returns true if string is equal to another string else false.
+- strncmp: Identical tto c/c++ strncmp function. Returns true if string is not equal to another string else false.
+- strlwr: Identical tto c/c++ strlwr function. Returns lowercase version of string.
+- strupr: Identical tto c/c++ strupr function. Returns uppercase version of string.
+- strrev: Identical tto c/c++ strrev function. Returns reverse of string.
+- strdup: Identical tto c/c++ strdup function. Returns duplicate of string.
+- strchr: Identical tto c/c++ strchr function. Return the lowest index in string where character is found else false.
+- strstr: Identical tto c/c++ strstr function. Return the lowest index in string where substring is found else false.
 ## New functions
-- bopen : Opens a file in binary mode
-- bwrite : Writes encoded content in a binary file
-- bread : Returns text version of decoded binary file
-- fgets : Identical to c/c++ fgets function
-- fputs : Identical to c/c++ fputs function
-- fopen : Identical to c/++ fopen function
-- fprintf : Identical to c/c++ fprintf function.
-- putc : Identical to c/c++ putc function.
-- getc : Identical to c/c++ getc function.
+- strlen: Identical tto c/c++ strlen function. Returns length of string.
+- strcmp: Identical tto c/c++ strcmp function. Returns true if string is equal to another string else false.
+- strncmp: Identical tto c/c++ strncmp function. Returns true if string is not equal to another string else false.
+- strlwr: Identical tto c/c++ strlwr function. Returns lowercase version of string.
+- strupr: Identical tto c/c++ strupr function. Returns uppercase version of string.
+- strrev: Identical tto c/c++ strrev function. Returns reverse of string.
+- strdup: Identical tto c/c++ strdup function. Returns duplicate of string.
+- strchr: Identical tto c/c++ strchr function. Return the lowest index in string where character is found else false.
+- strstr: Identical tto c/c++ strstr function. Return the lowest index in string where substring is found else false.
 ## License
-
 MIT

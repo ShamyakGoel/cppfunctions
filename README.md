@@ -1,4 +1,4 @@
-# Cppfunctions
+# Shamyak Goel
 
 cppfunctions includes functions from c/c++ and syntax is very similar to c/c++
 
@@ -50,22 +50,24 @@ then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" re
 - fprintf : Identical to c/c++ fprintf function. Writes data in file and you can pass formats of variables.(%d or %i for an int , %s for a string , %f for a float , %b for a bolean value)
 - putc : Identical to c/c++ putc function. Writes a character into a file.
 - getc : Identical tto c/c++ getc function. Returns a character read from a file.
-- isalnum : Identical to c/c++ isalnum function, Returns True if a character/string is alphanumeric
-- isalpha : Identical to c/c++ isalpha function, Returns True if a character is alphabetic
-- islower : Identical to c/c++ islower function, Returns True if a character/string is lowercase
-- isspace : Identical to c/c++ isspace, Returns True if a character is a space character
-
+- strlen: Identical tto c/c++ strlen function. Returns length of string.
+- strcmp: Identical tto c/c++ strcmp function. Returns true if string is equal to another string else false.
+- strncmp: Identical tto c/c++ strncmp function. Returns true if string is not equal to another string else false.
+- strlwr: Identical tto c/c++ strlwr function. Returns lowercase version of string.
+- strupr: Identical tto c/c++ strupr function. Returns uppercase version of string.
+- strrev: Identical tto c/c++ strrev function. Returns reverse of string.
+- strdup: Identical tto c/c++ strdup function. Returns duplicate of string.
+- strchr: Identical tto c/c++ strchr function. Return the lowest index in string where character is found else false.
+- strstr: Identical tto c/c++ strstr function. Return the lowest index in string where substring is found else false.
 ## New functions
-- isalnum : Identical to c/c++ isalnum function
-- isalpha : Identical to c/c++ isalpha function
-- islower : Identical to c/c++ islower function
-- isspace : Identical to c/c++ isspace
-- bopen : Opens a file in binary mode
-- bwrite : Writes encoded content in a binary file
-- bread : Returns text version of decoded binary file
-- fgets : Identical to c/c++ fgets function
-- fputs : Identical to c/c++ fputs function
-
+- strlen: Identical tto c/c++ strlen function. Returns length of string.
+- strcmp: Identical tto c/c++ strcmp function. Returns true if string is equal to another string else false.
+- strncmp: Identical tto c/c++ strncmp function. Returns true if string is not equal to another string else false.
+- strlwr: Identical tto c/c++ strlwr function. Returns lowercase version of string.
+- strupr: Identical tto c/c++ strupr function. Returns uppercase version of string.
+- strrev: Identical tto c/c++ strrev function. Returns reverse of string.
+- strdup: Identical tto c/c++ strdup function. Returns duplicate of string.
+- strchr: Identical tto c/c++ strchr function. Return the lowest index in string where character is found else false.
+- strstr: Identical tto c/c++ strstr function. Return the lowest index in string where substring is found else false.
 ## License
-
 MIT

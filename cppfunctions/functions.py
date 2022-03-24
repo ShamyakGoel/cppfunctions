@@ -396,3 +396,28 @@ def bread(file:IO,raw=False):
     for i in file:
         content+=i.decode()
     return content
+# C/C++ String functions but in python!
+def strlen(str:str):
+    return str.__len__()
+def strcmp(str1:str, str2:str):
+    return str1 == str2
+def strncmp(str1:str, str2:str):
+    return str1 != str2
+def strlwr(str:str):
+    return str.lower()
+def strupr(str:str):
+    return str.upper()
+def strrev(str:str):
+    return str [::-1]
+def strdup(string:str):
+    return str(string)
+def strchr(string:str, character:str):
+    if(character.__len__() != 1):
+        raise(Exception("Invalid character"))
+    for i in string:
+        if(i == character):
+            return string.index(character)
+        else:
+            return False
+def strstr(string:str, substring:str):
+    return string.index(substring), True
