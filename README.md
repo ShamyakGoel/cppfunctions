@@ -21,6 +21,9 @@ Install the package as shown below
 ```
 pip install cppfunctions
 ```
+Guide to install:-
+![Guide to install cppfunctions](https://shamyakgoel.github.io/website-data/2022-03-25-12-05-28.gif)
+
 If you get an error  - pip is not recognized as function etc.
 then wacth this video - <a href="https://www.youtube.com/watch?v=An2UBGAlzpU" rel="noreferrer noopener" target="_blank">Click Here</a>
 # Functions
