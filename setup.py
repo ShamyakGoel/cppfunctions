@@ -13,7 +13,7 @@ setup(
   install_requires=[],
   long_description_content_type="text/x-rst",
   classifiers=[
-    'Development Status :: 5 - Stable', 
+    'Development Status :: 5 - Production', 
     'Intended Audience :: Developers', 
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',

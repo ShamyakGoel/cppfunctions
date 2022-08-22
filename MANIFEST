@@ -3,4 +3,3 @@ README
 setup.cfg
 setup.py
 cppfunctions\__init__.py
-cppfunctions\functions.py
